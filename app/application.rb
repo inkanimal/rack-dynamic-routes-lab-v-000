@@ -12,7 +12,9 @@ def call(env)
  
       resp.write @@items
     end 
-    
+    elsif 
+      resp.write "Items not found"
+      resp.status = 400
     # if req.path=="/items"
     #   resp.write "You requested the songs"
     else
