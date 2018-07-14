@@ -17,6 +17,7 @@ def call(env)
       resp.status = 400
     else
       resp.write item.price
+    end
     # if req.path=="/items"
     #   resp.write "You requested the songs"
     else
