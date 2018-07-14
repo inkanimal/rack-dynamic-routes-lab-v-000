@@ -11,7 +11,8 @@ def call(env)
       price = @@items.find{|s| s.price == item_price}
  
       resp.write @@items
-      
+    end 
+    
     # if req.path=="/items"
     #   resp.write "You requested the songs"
     else
