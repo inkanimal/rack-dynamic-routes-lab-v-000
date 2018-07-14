@@ -10,9 +10,9 @@ def call(env)
       item_price = req.path.split("/items/").last #turn /songs/Sorry into Sorry
       price = @@items.find{|s| s.price == item_price}
  
-      resp.write @@items
+      # resp.write @@items
      
-    elsif 
+    if 
       resp.write "Items not found"
       resp.status = 400
     # if req.path=="/items"
