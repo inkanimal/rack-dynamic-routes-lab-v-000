@@ -11,7 +11,7 @@ def call(env)
       price = @@items.find{|s| s.price == item_price}
  
       resp.write @@items
-    end 
+     
     elsif 
       resp.write "Items not found"
       resp.status = 400
