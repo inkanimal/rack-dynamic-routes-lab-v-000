@@ -8,7 +8,7 @@ def call(env)
    if req.path.match(/items/)
  
       item_price = req.path.split("/items/").last #turn /songs/Sorry into Sorry
-      song = @@items.find{|s| s.price == item_price}
+      price = @@items.find{|s| s.price == item_price}
  
       resp.write item.price
     # if req.path=="/items"
