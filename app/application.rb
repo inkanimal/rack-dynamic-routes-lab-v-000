@@ -8,13 +8,15 @@ def call(env)
    if req.path.match(/items/)
  
       item_name = req.path.split("/items/").last #turn /songs/Sorry into Sorry
-      price = @@items.find{|s| s.name == item_name}
+      item = @@items.find{|s| s.name == item_name}
  
       # resp.write @@items
      
     if item.nil?
       resp.write "Items not found"
       resp.status = 400
+    else
+      resp.write item.price
     # if req.path=="/items"
     #   resp.write "You requested the songs"
     else
