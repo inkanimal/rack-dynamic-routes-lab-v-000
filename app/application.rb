@@ -12,7 +12,7 @@ def call(env)
  
       # resp.write @@items
      
-    if 
+    if item.nil?
       resp.write "Items not found"
       resp.status = 400
     # if req.path=="/items"
